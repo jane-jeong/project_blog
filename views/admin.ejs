@@ -1,22 +1,23 @@
 <html>
   <head>
-    <title>  <%= title %> </title>
+    <title><%= title %></title>
     <link rel="stylesheet" type="text/css" href="css/admin.css">
   </head>
-
   <body>
-
     <% if(username){ %>
+      <div class="grid">
         <h1>Admin Page</h1>
-        <h2>Welcome! <%= name %> </h2>
-        <button class="home_button" id="HomeButton"><a href="/"> Home </a></button>
-        <button class="board_list_button" id="boardListButton"><a href="/boardlist/admin"> Board List Admin </a></button>
-        <button class="board_write_button" id="boardWriteButton"><a href="/board/write"> Board Write </a></button>
-        <button class="logout_button" id="logoutButton"> <a href="/logout"> Logout </a> </button>
-
+        <h2>Welcome! <%= name %></h2>
+        <button class="home_button" id="HomeButton"><a href="/">Home</a></button>
+        <button class="board_list_button" id="boardListButton"><a href="/boardlist/admin">Board Management</a></button>
+        <button class="board_write_button" id="boardWriteButton"><a href="/board/write">Board Write</a></button>
+        <button class="logout_button" id="logoutButton"> <a href="/logout">Logout</a> </button>
+      </div>
     <% }else{ %>
+      <div class="grid">
         <h1> Admin Only😀 </h1>
-        <button class="login_button" id="loginButton"> <a href="/login"> Admin Login </a> </button>
+        <h4><a href="/login">Are you an administrator?</a></h4>
+      </div>
     <% } %>
 
   </body>

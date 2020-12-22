@@ -33,3 +33,21 @@ h1, h2, h3, h4, h5, h6, p {
 }
 a { text-decoration: none; color: black; }
 a:visited, a:hover, a:focus, a:active  { text-decoration: none; }
+
+
+.form {
+    display: grid; 
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    align-items: center;
+    width: 300px; 
+    height: 100px; 
+}
+
+.form button {
+    width: 32px; 
+    height: 16px;
+    background-color: #e5e5e5;
+    color: #1d1d1d;
+    border: 0px; 
+}

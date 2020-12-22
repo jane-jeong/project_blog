@@ -2,29 +2,29 @@
 <html xmlns="http://www.w3.org/1999/html">
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='css/board.css' />
+    <link rel='stylesheet' href='css/login.css' />
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <form method="post" action="/login/user" onsubmit="onWriteSubmit()">
-      <table border="2">
-
-        <tr>
-          <th>USER NAME</th>
-          <td><input type="text" name="username" id="username" required/></td>
-        </tr>
-
-        <tr>
-          <th>PASSWORD</th>
-          <td><input type="password" name="password" id="password" required/></td>
-        </tr>
-
-        <tr>
-          <td colspan="2"><input type="submit" value="등록"></td>
-        </tr>
-      </table>
-    </form>
+      <div class="form">
+        <form method="post" action="/login/user" onsubmit="onWriteSubmit()">
+    
+            <tr>
+              <th>USER NAME</th>
+              <td><input type="text" name="username" id="username" required/></td>
+            </tr>
+    
+            <tr>
+              <th>PASSWORD</th>
+              <td><input type="password" name="password" id="password" required/></td>
+            </tr>
+    
+            <tr>
+              <div class="button"><input type="submit" value="submit"></div>
+            </tr>
+          </table>
+        </form>
+      </div>
   <script>
     function onWriteSubmit()
     {
