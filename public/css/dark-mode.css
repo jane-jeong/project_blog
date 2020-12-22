@@ -1,0 +1,44 @@
+/* dark-mode */
+
+body.dark {
+    background-color: #222222;
+    transition: color 0.3s linear; 
+}
+
+body.dark nav {
+    background: rgba(10,10,10,0.1);
+    backdrop-filter: saturate(180%) blur(40px);
+    transition: color 0.3s linear; 
+}
+
+body.dark .card, body.dark .card-bottom { 
+    background-color: #1f1f1f;
+}
+
+body.dark p,
+body.dark h1, 
+body.dark h2, 
+body.dark h3, 
+body.dark h4, 
+body.dark h5, 
+body.dark h6, 
+body.dark footer,
+body.dark .logo a {
+    color: #e5e5e5;
+    transition: color 0.3s linear; 
+}
+
+body.dark h1, 
+body.dark h2, 
+body.dark h3, 
+body.dark h4, 
+body.dark h5, 
+body.dark h6, 
+body.dark footer {
+    font-weight: 500;
+}
+
+body.dark p, 
+body.dark footer {
+    font-weight: 100;
+}

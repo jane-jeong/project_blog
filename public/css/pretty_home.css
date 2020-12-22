@@ -1,0 +1,230 @@
+/* Google Font */ 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+/* font-family: 'Noto Sans KR', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');
+/* font-family: 'Noto Serif KR', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+/* font-family: 'Black Han Sans', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Song+Myung&display=swap');
+/* font-family: 'Song Myung', serif; */ 
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;300;400;500;600;700&display=swap');
+/* font-family: 'JetBrains Mono', monospace; */
+
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 18px;  
+    font-family: 'Noto Serif KR', serif;
+    font-weight: 400;
+    color: #1d1d1f;
+    line-height: 160%;
+}
+
+body {
+    background-color: #f5f5f7;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+a { text-decoration: none; color: black; }
+a:visited, a:hover, a:focus, a:active  { text-decoration: none; }
+
+nav {
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    margin: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 1000;
+    display: flex ; 
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background: rgba(255,255,255,0.4);
+    backdrop-filter: saturate(180%) blur(40px); /* frosted glass */
+    border-bottom: 0px solid rgba(225,225,225,0.5);
+}
+
+.logo {
+    width: 20%; 
+    height: 100%; 
+    display: flex ; 
+    justify-content: flex-start ;
+    align-items : center;
+    font-size: 24px; 
+    font-family: 'Noto Serif KR', serif;
+    font-weight: 900;
+    padding-left: 50px;
+}
+
+.logo a {
+    cursor: pointer;
+}
+
+.darkmode {
+    width:80%; 
+    height: 100%;
+    display: flex ; 
+    justify-content: flex-end ;
+    align-items : center;
+    padding-right: 50px;
+}
+
+.checkbox {
+    opacity: 0;   
+}
+
+body.dark .label .moon {
+    transform: translateX(24px);
+}
+
+.label {
+    position: relative;
+    width: 70px;
+    height: 25px; 
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-evenly; 
+    align-items: center; 
+    cursor: pointer;
+}
+
+.moon {
+    width: 24px; 
+    height: 24px; 
+    border-radius: 50%; 
+    background-color: #222222;
+    transition: transform 0.2s linear; 
+}
+
+.sun {
+    width: 22px; 
+    height: 22px; 
+    border-radius: 50%; 
+    background-color: #ffffff;
+    /* border: 1px #ffffff solid; */
+}
+
+/* body */
+.body-wrap {
+    position: absolute; 
+    top: 0px;
+    width: 980px; 
+    height: auto; 
+}
+
+/* Section - Blog */
+.blog {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; 
+    align-items: flex-start;
+    overflow: hidden;
+    margin-top: 180px;
+}
+
+.section-content {
+    width: 100%;
+    height: auto;
+}
+
+.section-head {
+    width: 100%;
+    height: 52px;
+    font-size: 28px; 
+    font-family: 'Noto Serif KR', serif;
+    font-weight: 900;
+    border-bottom: solid 1px #d0d0d0;
+    margin: 0px;
+}
+
+.section-tiles {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    list-style: none;
+    padding: 0px;
+}
+
+.tile-item-list {
+    width: 100%;
+    height: 200px;
+    border-bottom: solid 1px #d0d0d0;
+}
+
+.title-description {
+    width: 100%;
+    height: 100%;
+    display: grid; 
+    grid-template-columns: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-category h2 {
+    color: #111111;
+    margin-top: 0px;
+    font-size: 24px; 
+    font-family: 'Noto Serif KR', serif;
+    font-weight: 700;
+}
+
+/*
+.title-timestamp {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: right;
+    color: #999999;
+    font-size: 15px;
+}
+*/
+
+footer {
+    width: 100%; 
+    height: 200px; 
+    display: flex; 
+    justify-content: center;
+    align-items: flex-end;
+}
+
+footer small {
+    font-size: 12px;
+    margin: 20px;
+}
+
+
+
+/* 반응형 */
+
+@media screen and (max-width: 1140px) {
+    .card-container {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: space-evenly; 
+        align-items: center;
+    }
+    }
+        
+    @media screen and (max-width: 950px) {
+    .card-container {
+    
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: space-evenly; 
+        align-items: center;
+    }
+    }

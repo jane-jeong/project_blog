@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> <%= title %> </title>
+    <link rel="stylesheet" href="/css/pretty_home.css"  type="text/css">
+    <link rel="stylesheet" href="/css/dark-mode.css"  type="text/css">
+    <script defer src ="/javascript/dark-mode.js"></script>
+</head>
+<body>
+    <nav> 
+        <div class="logo"> <a href="/">생 각</a> </div>
+        <div class="darkmode">
+            <input type = "checkbox" class = "checkbox" id="checkbox">
+            <label for = "checkbox" class = "label"> 
+                <div class = "moon"> </div>
+                <div class = "sun"> </div>
+            </label> 
+        </div>
+    </nav>
+    <div class="body-wrap">
+
+        <section class="blog">
+            <div class="section-content">
+                <h2 class="section-head"> 글 </h2>
+                <ul class="section-tiles">
+                    <%
+                    for(var i = 0; i<rows.length; i++)
+                    {
+                    %>
+                    <li class="tile-item-list">
+                        <div class="title-description"> 
+                                <div class="title-category"><a href="/boardlist/read/<%=rows[i].idx%>"><h2><%=rows[i].title%></h2></a></div>
+                                <!-- <div class="title-timestamp"><p><%=rows[i].moddate%></p></div> -->
+                        </div>
+                    </li>
+                    <%
+                    }
+                    %>
+                </ul>
+            </div>
+        </section>
+
+
+
+        <footer> 
+            <small> 	&copy; 2020. 정재은. </small> 
+        </footer>
+    </div>
+
+
+
+</body>
+
+</html>

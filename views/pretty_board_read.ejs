@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/pretty_home.css"  type="text/css">
+    <link rel="stylesheet" href="/css/pretty_board_read.css"  type="text/css">
+    <link rel="stylesheet" href="/css/dark-mode.css"  type="text/css">
+    <script defer src ="/javascript/dark-mode.js"></script>
+</head>
+<%
+var read = rows[0];
+%>
+<body>
+    <nav> 
+        <div class="logo"> <a href="/">생 각</a> </div>
+        <div class="darkmode">
+            <input type = "checkbox" class = "checkbox" id="checkbox">
+            <label for = "checkbox" class = "label"> 
+                <div class = "moon"> </div>
+                <div class = "sun"> </div>
+            </label> 
+        </div>
+    </nav>
+
+    <div class="header_padding"> </div>
+    <div class="body-wrap">
+        <section class="contents">
+            <div class="contents-meta">
+                <div class="contents-title"> <h1><%=read.title%></h1> </div>
+                <div class="contents-body"> 
+                    <p><%=read.content%></p> 
+                </div>
+            </div>
+        </section>
+
+        <footer> 
+            <small> copyright. Jane Jeong. </small> 
+        </footer>
+    </div>
+
+</body>
+
+<script defer src = "modules/dark-mode.js"></script>
+
+</html>

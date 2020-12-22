@@ -1,0 +1,21 @@
+{
+	"janejeong": {
+		"password": "janejeong",
+		"name": "janejeong"
+	},
+
+	"first_user": {
+		"password": "first_pass",
+		"name": "abet"
+	},
+
+	"second_user": {
+		"password": "second_pass",
+		"name": "betty"
+	},
+
+	"newuser": {
+		"password": "third_pass",
+		"name": "post_test"
+	}
+}

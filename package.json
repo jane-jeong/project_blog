@@ -1,0 +1,28 @@
+{
+  "name": "project_blog",
+  "version": "1.0.0",
+  "description": "1. 데이터베이스는 Maria DB 사용 \r 2. 템플릿 엔진은 ejs 사용",
+  "main": "helloworld.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jane-jeong/project_blog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jane-jeong/project_blog/issues"
+  },
+  "homepage": "https://github.com/jane-jeong/project_blog#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mongoose": "^4.4.5",
+    "mysql": "^2.18.1"
+  }
+}

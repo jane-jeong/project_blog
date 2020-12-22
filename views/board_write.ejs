@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='css/board.css' />
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  </head>
+  <body>
+
+    <% if(username){ %>
+      <h1><%= title %></h1>
+      <form method="post" action="/board/write" onsubmit="onWriteSubmit()">
+        <table border="2">
+          <tr>
+            <th>title</th>
+            <td><input type="text" name="title" id="title" required /></td>
+          </tr>
+          <tr>
+            <th>writer</th>
+            <td><input type="text" name="writer" id="writer" required/></td>
+          </tr>
+          <tr>
+            <th>password</th>
+            <td><input type="password" name="password" id="password" required/></td>
+          </tr>
+          <tr>
+            <th>contents</th>
+            <td><textarea cols="50" role="12" name="content" id="content" required></textarea></td>
+          </tr>
+          <tr>
+            <td colspan="2"><input type="submit" value="submit"></td>
+          </tr>
+        </table>
+      </form>
+    <script>
+      function onWriteSubmit()
+      {
+        if ( $("#writer").val().trim() == "" )
+        {
+          var message = "please input writer";
+          $("#writer").val("");
+          $("#writer").focus();
+          alert(message);
+          return false;
+        }
+  
+        if ( $("#title").val().trim() == "" )
+        {
+          var message = "please input title";
+          $("#title").val("");
+          $("#title").focus();
+          alert(message);
+          return false;
+        }
+  
+        if ( $("#content").val().trim() == "" )
+        {
+          var message = "please input content";
+          $("#content").val("");
+          $("#content").focus();
+          alert(message);
+          return false;
+        }
+  
+        if ( $("#password").val().trim() == "" )
+        {
+          var message = "please input password";
+          $("#password").val("");
+          $("#password").focus();
+          alert(message);
+          return false;
+        }
+      }
+    </script>
+
+
+  <% }else{ %>
+    <h1> Admin Only😀 </h1>
+    <button class="login_button" id="loginButton"> <a href="/login"> Admin Login </a> </button>
+  <% } %>
+
+  </body>
+</html>
